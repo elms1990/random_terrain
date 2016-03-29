@@ -8,7 +8,7 @@ if __name__ == '__main__':
     terrainParams = { 'smoothFactor': 1, 'gaussianSmooth': 1.5, 'levels': 10 }
 
     valueNoise = ValueNoise(**params)    
-    terrain = valueNoise.generateTerrain(**terrainParams)
+    terrain = valueNoise.generate(**terrainParams)
 
     im = Image.new('RGB', (params['w'], params['h']))
     px = im.load()

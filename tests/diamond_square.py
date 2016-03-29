@@ -8,7 +8,7 @@ if __name__ == '__main__':
     terrainParams = { 'sampleSize': 1024 }
 
     diamondSquare = DiamondSquare(**params)    
-    terrain = diamondSquare.generateTerrain(**terrainParams)
+    terrain = diamondSquare.generate(**terrainParams)
 
     im = Image.new('RGB', (params['dim'], params['dim']))
     px = im.load()

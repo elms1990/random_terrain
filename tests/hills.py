@@ -7,7 +7,7 @@ if __name__ == '__main__':
     params = { 'w': 256, 'h': 256 }
     terrainParams = { 'minRadius': 12, 'maxRadius': 13, 'iterations': 'auto' }
     hills = Hills(**params)
-    terrain = hills.generateTerrain(**terrainParams)
+    terrain = hills.generate(**terrainParams)
 
     im = Image.new('RGB', (params['w'], params['h']))
     px = im.load()

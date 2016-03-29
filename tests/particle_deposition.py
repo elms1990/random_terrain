@@ -31,9 +31,9 @@ def digRiver(terrain, riverPos):
 
 def generateImprovedTerrain(obj, w, h, dropPoints, maxStabilityRadius, minParticles, maxParticles,
         iterations):
-    terrain = obj.generateTerrain(dropPoints, maxStabilityRadius, minParticles, maxParticles,
+    terrain = obj.generate(dropPoints, maxStabilityRadius, minParticles, maxParticles,
             iterations)
-    rainMap = obj.generateTerrain(800, 3, minParticles, maxParticles,
+    rainMap = obj.generate(800, 3, minParticles, maxParticles,
             iterations)
     rainMap = meanFilter(rainMap, 5)
 

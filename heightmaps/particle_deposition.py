@@ -11,7 +11,7 @@ class ParticleDeposition:
         self.w = w
         self.h = h
 
-    def generateTerrain(self, dropPoints, maxStabilityRadius, minParticles, maxParticles,
+    def generate(self, dropPoints, maxStabilityRadius, minParticles, maxParticles,
             iterations):
         terrain = np.zeros((self.w, self.h), dtype=np.float)
 

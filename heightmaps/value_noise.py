@@ -9,7 +9,7 @@ class ValueNoise:
         self.w = w
         self.h = h
 
-    def generateTerrain(self, levels=10, smoothFactor=1, gaussianSmooth=1.5):
+    def generate(self, levels=10, smoothFactor=1, gaussianSmooth=1.5):
         return self.__generateNoise__(levels, smoothFactor, gaussianSmooth)
 
     def __interpolate__(self, noise, x, y):

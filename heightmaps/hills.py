@@ -30,7 +30,7 @@ class Hills:
                 if z >= 0 and tY >= 0 and tY < h and tX >= 0 and tX < w:
                     terrain[y1 + y, x1 + x] += z
 
-    def generateTerrain(self, minRadius=5, maxRadius=19, iterations=200):
+    def generate(self, minRadius=5, maxRadius=19, iterations=200):
         if iterations == 'auto':
             iterations = int(math.ceil((self.w * self.h) * 0.07))
         terrain = np.zeros((self.w, self.h), dtype=np.float)

@@ -8,7 +8,7 @@ class DiamondSquare:
     def __init__(self, dim):
         self.dim = dim
 
-    def generateTerrain(self, sampleSize=16):
+    def generate(self, sampleSize=16):
         return self.__generateNoise__(sampleSize)
 
     def __sampleWithNoise__(self, sampleSize, scale):

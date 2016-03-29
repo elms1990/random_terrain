@@ -13,7 +13,7 @@ class Sparks:
         self.w = w
         self.h = h
 
-    def generateTerrain(self, initialScatter='auto', landProb=0.8, smoothingIterations=8):
+    def generate(self, initialScatter='auto', landProb=0.8, smoothingIterations=8):
         if initialScatter == 'auto':
             initialScatter = (self.w * self.h) * 0.10
         terrain = np.zeros((self.w, self.h), dtype=np.int8)

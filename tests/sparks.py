@@ -7,7 +7,7 @@ if __name__ == '__main__':
     params = { 'w': 32, 'h': 32 }
     terrainParams = { 'initialScatter': 'auto', 'landProb': 0.77 }
     sparks = Sparks(**params)
-    terrain = sparks.generateTerrain(**terrainParams)
+    terrain = sparks.generate(**terrainParams)
 
     im = Image.new('RGB', (params['w'], params['h']))
     px = im.load()
