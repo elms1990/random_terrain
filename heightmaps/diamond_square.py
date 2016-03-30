@@ -8,13 +8,13 @@ class DiamondSquare:
     def __init__(self, dim):
         self.dim = dim
 
-    def generate(self, sampleSize=16):
-        return self.__generateNoise__(sampleSize)
+    def generate(self, sampleSize=16, roughness=1.6):
+        return self.__generateNoise__(sampleSize, roughness)
 
     def __sampleWithNoise__(self, sampleSize, scale):
         return (random.uniform(0, 1) * 2 - 1) * sampleSize * scale
 
-    def __generateNoise__(self, sampleSize):
+    def __generateNoise__(self, sampleSize, roughness):
         noise = np.zeros((self.dim, self.dim), np.float)
 
         scale = 1.0 / self.dim
@@ -25,7 +25,7 @@ class DiamondSquare:
     
         while sampleSize > 1:
             self.__diamondSquare__(noise, sampleSize, scale)
-            scale *= 1.6
+            scale *= roughness
             sampleSize /= 2
 
         nois = medianFilter(noise)
